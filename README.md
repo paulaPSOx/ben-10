@@ -39,13 +39,47 @@ Reviver a emoção do universo **Ben 10**, oferecendo uma maneira interativa de 
 ## 📂 Estrutura do Projeto
 
 ```
+
 ├── src
 │   ├── css
+│   │   ├── guia-personagens.css
+│   │   ├── index.css
+│   │   ├── jogo.css
+│   │   ├── menu.css
+│   │   └── sobre.css
 │   ├── fonts
+│   │   └── fonts.css
 │   ├── imagens
+│   │   ├── aliens
+│   │   │   ├── quatro-braços.jpg
+│   │   │   ├── mutante.jpg
+│   │   │   └── eco.jpg
+│   │   ├── cards
+│   │   │   ├── card1.jpg
+│   │   │   └── card2.jpg
+│   │   ├── jogo
+│   │   │   ├── ben10.jpg
+│   │   │   └── transformacao.jpg
+│   │   ├── setas
+│   │   │   └── seta.jpg
+│   │   ├── omntrix
+│   │   │   └── omnitrix.jpg
+│   │   └── wallpaper
+│   │       └── ben10-wallpaper.jpg
 │   ├── js
+│   │   ├── guia-personagens.js
+│   │   ├── index.js
+│   │   ├── jogo.js
+│   │   ├── menu.js
+│   │   └── sobre.js
 │   └── sounds
+│       └── omnitrix.mp3
 ├── html
+│   ├── guia-personagens.html
+│   ├── index.html
+│   ├── jogo.html
+│   ├── menu.html
+│   └── sobre.html
 └── README.md
 ```
 
@@ -55,9 +89,20 @@ Reviver a emoção do universo **Ben 10**, oferecendo uma maneira interativa de 
 
 ## 📄 Descrição dos Arquivos
 
-- **CSS** 🎨: Estiliza cada página e suas seções específicas.  
-- **JavaScript** ⚙️: Gerencia a lógica interativa e animações.  
-- **Imagens e Sons** 📸🎵: Adicionam imersão visual e auditiva ao projeto.  
+- **guia-personagens.css**: Estilos específicos para a página dos personagens e suas interações.
+- **index.css**: Estilos gerais para a página principal.
+- **jogo.css**: Estilos relacionados ao jogo e ao comportamento dos alienígenas.
+- **menu.css**: Estilos para a página de navegação do menu.
+- **sobre.css**: Estilos para a página sobre o projeto e os personagens.
+- **fonts.css**: Arquivo com estilos de fontes utilizadas no projeto.
+- **guia-personagens.js**: Lógica JavaScript para interações da página de seleção de personagens.
+- **index.js**: Funcionalidades gerais da página inicial.
+- **jogo.js**: Lógica de transformação dos alienígenas e jogabilidade.
+- **menu.js**: Lógica para navegação e interatividade no menu.
+- **sobre.js**: Funcionalidades para a página de informações sobre o projeto.
+- **omnitrix.mp3**: Efeitos sonoros do Omnitrix.
+- **imagens/**: Pasta com imagens de alienígenas, cartas, cenas do jogo, setas, e o Omnitrix.
+- **html/**: Contém os arquivos HTML das diferentes páginas. 
 
 ---
 
