@@ -1,0 +1,521 @@
+@font-face {
+  font-family: 'Badaboom BB';
+  src: url('../fonts/badaboom-bb/BADABB__.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Obelix';
+  src: url('../fonts/obelix-pro/ObelixPro-cyr.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kids Magazine';
+  src: url('../fonts/kids-magazine/Kids\ Magazine.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00ff00;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00b300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../imagem/wallpaper-sobre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: -1;
+}
+
+
+header {
+  font-family: 'Obelix', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #00ff00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 10px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: #00ff00;
+  font-family: 'Kids Magazine', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+header a img.logo-ben10 {
+  width: 60px;
+  height: auto; 
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin-right: 15px;
+  border-radius: 50%; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header a img.logo-ben10:hover {
+  filter: brightness(1.2);
+}
+
+.container {
+  padding: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover; 
+}
+
+section img {
+  width: 200px;
+  height: 200px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+header a img.logo-ben10 {
+  width: 60px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.personagens ul,
+.vilões ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.personagens li,
+.vilões li {
+  text-align: center;
+}
+
+.personagens img,
+.vilões img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.personagens li img,
+.vilões li img {
+  margin-top: 5px;
+}
+
+.personagens li span,
+.vilões li span {
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.personagens li img,
+.vilões li img {
+  margin-top: 5px;
+}
+
+.personagens li span,
+.vilões li span {
+  display: block;
+  margin-top: 8px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+iframe {
+  display: block;
+  margin: 20px auto;
+}
+
+section.logo-ben10 img {
+  max-width: 200px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+section.alienigenas iframe {
+  width: 100%;
+  max-width: 415px;
+  height: 285px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+section.viloes img,
+section.viloes-container img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+section.viloes-grid img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 10px auto
+}
+
+section.conclusao img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  position: relative;
+  color: #00ff00;
+  font-family: 'Kids Magazine', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+section h2::before,
+section h2::after {
+  content: "";
+  display: block;
+  width: 82%;
+  height: 3px;
+  background-color: #00ff00;
+  margin: 10px auto;
+}
+
+section h2 span {
+  font-family: 'Kids Magazine', sans-serif;
+}
+
+section p, section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #ccc;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+section ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+section ul li {
+  margin: 10px 0;
+}
+
+.personagem {
+  text-align: center;
+}
+
+.personagem img {
+  width: 200px;
+}
+
+#transformar {
+  background-color: #00ff00;
+  color: #000;
+  font-family: fantasy;
+  padding: 12px 24px;
+  border: 2px solid #00ff00;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+#transformar:hover {
+  background-color: #02d802;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 179, 0, 0.6);
+  border-color: #02d802;
+}
+
+#transformar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-in-out; 
+}
+
+#transformar:hover::before {
+  transform: scaleX(1);
+}
+
+.personagem img {
+  width: 350px;
+  height: auto;
+  margin-top: 20px;
+  transition: transform 0.3s ease;
+}
+
+.personagem img:hover {
+  transform: scale(1.1);
+}
+
+.alien {
+  cursor: pointer;
+}
+
+.alien-nome {
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 10px;
+  color: #555;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.alien img {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+#alien-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.alien:hover {
+  transform: scale(1.1);
+}
+
+.sobre {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../imagem/ben10-wallpaper.jpg') no-repeat center center/cover;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.sobre h2 {
+  font-family: 'Kids Magazine', sans-serif;
+  font-size: 18px;
+  color: #00ff00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.sobre h3, .sobre h4 {
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.sobre p {
+  color: #d1d1d1;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.sobre ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.sobre ul li {
+  font-size: 1rem;
+  color: #00ff00;
+  margin-bottom: 10px;
+}
+
+.sobre ul li .estrelas {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.curiosidade-imagem img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.curiosidade-imagem img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.creditos {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.creditos p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.sobre h3, .sobre h4 {
+  color: #00ff00;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+footer {
+  font-family: 'Obelix', sans-serif;
+  font-size: 12px;
+  width: 100%;
+  border-top: 3px solid #00b300;
+  text-align: center;
+  margin-top: auto;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.github-link {
+  color: #08d808;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  header a img.logo-ben10 {
+      width: 55px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  section h2 {
+    font-size: 18px;
+  }
+
+  section p, section ul {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .alien {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  footer {
+    font-size: 10px;
+    padding: 8px;
+  }
+}

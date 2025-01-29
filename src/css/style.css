@@ -1,0 +1,257 @@
+@font-face {
+  font-family: 'Obelix';
+  src: url('../fonts/obelix-pro/ObelixPro-cyr.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Obelix', sans-serif;
+  background-image: url(../imagem/wallpaper-index.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.logo-ben10 {
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+}
+
+.titulo-inicial {
+  font-family: 'Obelix', sans-serif;
+  font-size: 20px;
+  color: white;
+  margin-top: 5px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.entrar-botao {
+  font-family: 'Obelix', sans-serif;
+  background: linear-gradient(135deg, #6ada35, #2e6100);
+  color: #000;
+  padding: 10px 20px;
+  border: 2px solid #6ada35;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 3px #6ada35;
+  box-shadow: 0 0 8px #6ada35;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.entrar-botao:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #2e6100, #6ada35);
+  box-shadow: 0 0 12px #6ada35, 0 0 20px #6ada35;
+  color: #fff;
+}
+
+.entrar-botao a {
+  color: #00FF00;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.entrar-botao a:hover {
+  color: #33FF33;
+  text-shadow: 0px 0px 8px rgb(203, 217, 61);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px #6ada35, 0 0 20px #6ada35;
+  }
+  50% {
+    box-shadow: 0 0 20px #6ada35, 0 0 30px #2e6100;
+  }
+  100% {
+    box-shadow: 0 0 10px #6ada35, 0 0 20px #6ada35;
+  }
+}
+
+.pagina-inicial {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20px;
+  margin-top: 120px;
+}
+
+.omnitrix-btn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.omnitrix-icon {
+  width: 100%;
+}
+
+.menu-item {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  box-shadow: 0 0 0 50px rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.menu-item.disabled,
+.menu-item.selected {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.radial-menu-container.active .menu-item {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.radial-menu-container {
+  position: fixed;
+  bottom: 15px;
+  right: 60px;
+  height: 140px;
+  width: 70px;
+}
+
+.radial-menu-container.active .centro {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.centro {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 0 0 0 10px #000, 0 0 0 55px #07c50071;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.menu-item img {
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover img {
+  width: 70%;
+  height: 70%;
+  box-shadow: 0 0 8px 4px #00FF00;
+}
+
+.selected .menu-item:hover img {
+  border: 4px solid #00ff00;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+footer {
+  font-family: 'Obelix', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-top: auto;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.github-link {
+  color: #08d808;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .menu {
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .titulo-inicial {
+    font-size: 18px;
+  }
+
+  .entrar-botao {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+
+  .logo-ben10 {
+    width: 55px;
+    margin-right: 10px;
+  }
+
+  footer {
+    font-size: 10px;
+    padding: 8px;
+  }
+}

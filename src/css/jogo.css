@@ -1,0 +1,391 @@
+@font-face {
+    font-family: 'Badaboom BB';
+    src: url('../fonts/badaboom-bb/BADABB__.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Obelix';
+    src: url('../fonts/obelix-pro/ObelixPro-cyr.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kids Magazine';
+    src: url('../fonts/kids-magazine/Kids\ Magazine.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Kids Magazine', 'Badaboom BB', 'Obelix', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive, sans-serif;
+    background-image: url('../imagem/wallpaper-jogo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #eeff00;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.733);
+    z-index: -1;
+}
+
+header {
+    background-color: #006f3a;
+    padding: 10px;
+    border-bottom: 3px solid #00b300;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.omnitrix-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-ben10 {
+    cursor: pointer;
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    transition: filter 0.3s;
+}
+  
+.logo-ben10:hover {
+    filter: brightness(1.2);
+}
+
+h1 {
+    color: #00ff00;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.menu-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 5px;
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.menu-principal li {
+    margin: 0;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.score-board p {
+    font-size: 15px;
+    margin-top: 15px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.911);
+}
+
+.score-board p#score {
+    color: #76ff03;
+}
+
+.score-board p#attempts {
+    color: #ff3d00;
+}
+
+.score-board p#timer {
+    color: #00e5ff;
+}
+
+.cup.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.cups-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cup {
+    width: 120px;
+    height: 160px;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+#cup1 {
+    background-color: rgb(250, 6, 130);
+    box-shadow: 0 0 15px rgba(250, 6, 130, 0.8); 
+}
+
+#cup2 {
+    background-color: rgb(3, 158, 230);
+    box-shadow: 0 0 15px rgba(3, 158, 230, 0.8);
+}
+
+#cup3 {
+    background-color: rgb(255, 218, 19);
+    box-shadow: 0 0 15px rgba(255, 218, 19, 0.8); 
+}
+
+.cup:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+}
+
+.cup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    padding: 15px 20px;
+    background-color: #00b300;
+    border: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.0rem;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden; 
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 179, 0, 0.4); 
+}
+
+button:hover {
+    background-color: #02d802;
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 179, 0, 0.6); 
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+button:hover::before {
+    transform: scaleX(1);
+}
+
+.disabled-button {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+#game-over button {
+    background-color: #06a791;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(6, 167, 145, 0.4);
+}
+
+#game-over button:hover {
+    background-color: #17d1b8;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(6, 167, 145, 0.6); 
+}
+
+#game-over button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+#game-over button:hover::before {
+    transform: scaleX(1);
+}
+
+#game-over h2 {
+    margin-bottom: 15px;
+    color: #ff3c00;
+}
+
+#game-over p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #76ff03;
+}
+
+#game-over #final-score {
+    color: #76ff03;
+}
+
+#game-over #high-score {
+    color: #fa0682;
+}
+
+.game-over {
+    display: none;
+    margin-top: 25px;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.poder-ativo {
+    background-color: #ff4f00;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+@keyframes powerEffect {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
+footer {
+    font-family: 'Obelix', sans-serif;
+    width: 100%;
+    border-top: 3px solid #00b300;
+    font-size: 12px;
+    text-align: center;
+    margin-top: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.github-link {
+    color: #08d808;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .logo-ben10 {
+        width: 55px;
+        margin-right: 10px;
+    }    
+
+    .menu-principal {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .menu-navegacao a {
+        font-size: 18px;
+    }
+  
+    .menu-navegacao ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 30px;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 470px) {
+    h1 {
+        font-size: 13px;
+    }
+
+    .logo-ben10 {
+        width: 55px;
+        margin-right: 10px;
+    }
+    
+
+    .cup {
+        width: 110px;
+        height: 150px;
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 8px;
+    }
+}

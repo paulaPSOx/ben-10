@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Ben 10 - Encontre o Ben</title>
+    <link rel="icon" href="src/imagem/logo-icon-ben10.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/jogo.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header do Jogo -->
+    <header class="menu-principal">
+        <div class="omnitrix-container">
+            <a href="#" id="link-ben10">
+                <img id="logo-ben10" class="logo-ben10" src="src/imagem/logo-clock-omnitrix.png" alt="Logo Ben 10">
+            </a>
+            <h1>Jogo - Clique no Ben</h1>
+        </div>
+    </header>
+
+    <!-- Container do Jogo -->
+    <section class="game-container">
+        <!-- Placar do Jogo -->
+        <div class="score-board">
+            <p id="score">
+                <span class="label">Pontos:</span>
+                <span class="value">0</span>
+            </p>
+            <p id="attempts">
+                <span class="label">Tentativas:</span>
+                <span class="value">3</span>
+            </p>
+            <p id="timer">
+                <span class="label">Tempo:</span>
+                <span class="value">1:30</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contêiner de Copos -->
+    <div class="cups-container">
+        <div class="cup" id="cup1" onclick="checkCup(1)"></div>
+        <div class="cup" id="cup2" onclick="checkCup(2)"></div>
+        <div class="cup" id="cup3" onclick="checkCup(3)"></div>
+    </div>
+
+    <!-- Botão Iniciar Jogo -->
+    <button id="start-btn">Iniciar Jogo</button>
+
+    <!-- Tela de Fim de Jogo -->
+    <div id="game-over" class="game-over">
+        <h2>Fim de Jogo!</h2>
+        <p>Sua Pontuação: <span id="final-score">0</span></p>
+        <p id="high-score">Recorde: 0</p>
+        <button id="restart-btn" disabled>Reiniciar Jogo</button>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 <a href="https://github.com/paulaPSOx" target="_blank" class="github-link">PaulaPSOx</a>. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script do Jogo -->
+    <script src="src/js/jogo.js"></script>
+</body>
+
+</html>

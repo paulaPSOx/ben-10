@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben 10 - O Universo Incrível</title>
+
+    <!-- Ícone da página -->
+    <link rel="icon" href="src/imagem/logo-icon-ben10.png" type="image/x-icon">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- Áudios -->
+    <audio id="omnitrix-transform" src="src/sounds/transform-sound.mp3"></audio>
+    <audio id="omnitrix-power-down" src="src/sounds/omnitrix-power-down.mp3"></audio>
+    <audio id="omnitrix-sound-choosing-alien" src="src/sounds/omnitrix-escolhendo-alien.mp3"></audio>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="menu">
+        <img class="logo-ben10" src="src/imagem/omnitrix-index.jpeg" alt="Logo Ben 10">
+        <h1 class="titulo-inicial">Ben 10</h1>
+        <a href="menu.html" class="entrar-botao">Entrar</a>
+    </header>
+
+    <!-- Navegação com menu radial -->
+    <nav class="radial-menu-container">
+        <!-- Botão principal do Omnitrix -->
+        <button id="omnitrix-button" class="omnitrix-btn" aria-label="Ativar Omnitrix">
+            <img src="src/imagem/logo-clock-omnitrix.png" alt="Omnitrix" class="omnitrix-icon">
+            <audio id="ben10-menu-omnitrix-sound" src="src/sounds/omnitrix-ativado.mp3"></audio>
+        </button>
+
+        <!-- Centro do menu radial -->
+        <div class="centro">
+            <button class="centro-cicle" aria-label="Ativar menu radial" onclick="toggleRadialMenu()">omnitrix</button>
+        </div>
+
+        <!-- Menu radial com opções de aliens -->
+        <div class="radial-menu">
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(1) calafrio.png" alt="Caláfrio">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(2) enormossaruro.png" alt="Enormossaruro">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(3) gosma.png" alt="Gosma">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(4) eco.png" alt="Eco">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(5) fogo-selvagem.png" alt="Fogo-Selvagem">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(6) alien-x.png" alt="Alien-x">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(7) artropode.png" alt="Artrópode">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(8) macaco-aranha.png" alt="Macaco-Aranha">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(9) arraia-a-jato.png" alt="Arraia-à-Jato">
+            </button>
+            <button class="menu-item">
+                <img src="src/imagem/aliens/(10) cromatico.png" alt="Cromático">
+            </button>
+        </div>
+    </nav>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 <a href="https://github.com/paulaPSOx" target="_blank" class="github-link">PaulaPSOx</a>. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./src/js/index.js" defer></script>
+</body>
+</html>

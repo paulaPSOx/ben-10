@@ -1,0 +1,289 @@
+@font-face {
+  font-family: 'Badaboom BB';
+  src: url('../fonts/badaboom-bb/BADABB__.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Obelix';
+  src: url('../fonts/obelix-pro/ObelixPro-cyr.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kids Magazine';
+  src: url('../fonts/kids-magazine/Kids\ Magazine.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../imagem/cards/wallpaper-guia.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.733);
+  z-index: -1;
+}
+
+.menu-principal {
+  width: 100%;
+  border-bottom: 3px solid #00b300;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.logo-ben10 {
+  cursor: pointer;
+  width: 60px;
+  height: auto;
+  margin-right: 15px;
+  transition: filter 0.3s;
+}
+
+.logo-ben10:hover {
+  filter: brightness(1.2);
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+
+.cabecalho .titulo {
+  font-family: 'Obelix', sans-serif;
+  color: white;
+  font-size: 27px;
+  margin-top: 55px;
+}
+
+.cabecalho .logo-ben-10 {
+  width: 40px;
+  height: 40px;
+  margin-top: 55px;
+}
+
+.alien-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+}
+
+.lista-aliens {
+  width: 350px;
+  height: 530px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-seta {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-seta img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.btn-seta:hover img {
+  transform: scale(1.1);
+}
+
+.cartao {
+  opacity: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.cartao.selecionado {
+  opacity: 1;
+  z-index: 1;
+}
+
+.cartao .informacoes {
+  background-color: rgba(168, 245, 79, 0.63);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 5px;
+}
+
+.cartao .informacoes .nome {
+  color: #f1ecff;
+  font-size: 19px;
+  padding: 6px 10px;
+  border-radius: 19px;
+  white-space: nowrap;
+}
+
+.cartao .informacoes .poder {
+  background-color: #35393d;
+  color: #f1ecff;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.cartao .container-imagem {
+  text-align: center;
+}
+
+.cartao .imagem-alien {
+  width: 100%;
+  height: 300px;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.cartao .descricao {
+  background-color: rgba(168, 245, 79, 0.63);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cartao .descricao .titulo {
+  background-color: #35393d;
+  color: #f1ecff;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.cartao .descricao .texto {
+  font-size: 13px;
+  padding: 10px;
+  text-align: justify;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+footer {
+  font-family: 'Obelix', sans-serif;
+  width: 100%;
+  border-top: 3px solid #00b300;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  margin-top: auto;
+}
+
+.github-link {
+  color: #08d808;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .logo-ben10 {
+    width: 55px;
+    margin-right: 10px;
+  }
+
+  .cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 100px;
+    gap: 10px;
+  }
+
+  .cabecalho .titulo {
+    font-size: 20px;
+  }
+
+  .alien-slider {
+    gap: 5px;
+  }
+
+  .lista-aliens {
+    width: 300px;
+    height: 535px;
+  }
+
+  .btn-seta img {
+    width: 45px;
+  }
+
+  footer {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo-ben10 {
+    width: 55px;
+    margin-right: 10px;
+  }
+
+  .cabecalho .titulo {
+    font-size: 18px;
+  }
+
+  .alien-slider {
+    gap: 5px;
+  }
+
+  .lista-aliens {
+    width: 100%;
+    height: 480px;
+  }
+
+  .btn-seta img {
+    width: 35px;
+  }
+
+  footer {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
