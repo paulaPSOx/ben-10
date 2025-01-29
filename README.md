@@ -147,7 +147,7 @@ Abaixo estão algumas capturas de tela que mostram a interface vibrante de inspi
 
 ## Links Úteis 🌐
 
-- Visualizar o projeto: [Ben 10 Seleção de Alienígenas]([https://paulaPSOx.github.io/ben-10](https://paulapsox.github.io/ben-10/))
+- Visualizar o projeto: [Ben 10 Seleção de Alienígenas](https://paulapsox.github.io/ben-10/)
 - Repositório no GitHub: [paulaPSOx/ben10-selecao-de-alienigenas](https://github.com/paulaPSOx/ben-10)
 
 ---
