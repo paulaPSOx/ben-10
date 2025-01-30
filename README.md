@@ -15,7 +15,6 @@ Este projeto é uma recriação do universo **Ben 10**, inspirado nos incríveis
 - [🚀 Como Usar](#🚀-como-usar)
 - [🌐 Links Úteis](#🌐-links-úteis)
 - [🔍 Testes](#🔍-testes)
-- [🤝 Contribuição](#🤝-contribuição)
 - [📜 Licença](#📜-licença)
 - [🙏 Agradecimentos](#🙏-agradecimentos)
 - [🚧 Melhorias Futuras](#🚧-melhorias-futuras)
@@ -160,16 +159,6 @@ Abaixo estão algumas capturas de tela que mostram a interface vibrante de inspi
 1. **Carregamento de Arquivos** ⚡: Verifique se as páginas carregam corretamente.  
 2. **Interatividade** 🎮: Explore as funcionalidades e animações.  
 3. **Responsividade** 📱: Teste em diferentes dispositivos para garantir a fluidez.  
-
----
-
-## 🤝 Contribuição
-
-Contribuições são sempre bem-vindas! 💡  
-1. Faça um **fork** 🍴.  
-2. Crie uma nova branch (`git checkout -b feature/nova-feature`).  
-3. Faça suas alterações e **commit** 🔧 (`git commit -m "Descrição da alteração"`).  
-4. Envie um **pull request** 📨.  
 
 ---
 
